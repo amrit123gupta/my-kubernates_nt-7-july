@@ -1,0 +1,22 @@
+apiversion:  v1
+kind:  apiVersion: v1
+kind: apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myonlinestore
+spec:
+  replicas: 2
+  selector:
+    app: myonlinestore
+  template:
+    metadata
+      labels:
+        app:myonlinestore
+    spec:
+      containers:
+      -name: myonlinestore-container
+      image:maha4iac/mahaonlinestore:2
+      ports:
+      -  conatinerport: 8080
+
+         
